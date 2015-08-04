@@ -47,8 +47,6 @@
         }
 
         foreach ($cars_matching_search as $match) {
-
-
                 $output = $output . "<div class='row'>
                         <div class='col-md-6'>
                             <img src=" . $match->getImage() . ">
@@ -60,6 +58,10 @@
                         </div>
                     </div>
                     ";
+        }
+
+        if (empty($cars_matching_search)) {
+            $output = "TRY AGAIN.";
         }
 
         return $output;
